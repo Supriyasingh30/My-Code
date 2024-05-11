@@ -84,6 +84,17 @@ if(n%2==0){
 
 //Lecture 4: Loops
 //For Loop
+int main(){
+int a;
+cout<<"ENter a number till which you want to repeat the sentence:";
+cin>>a;
+for(int i=0;i<=a;i++){
+    cout<<"Hare Krishna"<<endl;
+}
+    return 0;
+}
+
+
 /*int main()
 {
     int n;
@@ -169,7 +180,7 @@ for(int i=2;i<=n;i++){
 
 //Find all the prime no between two numbers
 
-int main(){
+/*int main(){
 int a, b;
 cin>>a>>b;
 for(int num=a;num<=b;num++){
@@ -184,5 +195,5 @@ for(int num=a;num<=b;num++){
         }
 }
     return 0;
-}
+}*/
 
