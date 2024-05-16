@@ -579,13 +579,6 @@ if(flag==0){
     return 0;
 }*/
 
-int main (){
-    int a = 'a';
-    int b = 'A';
-    cout<<a<<endl;
-    cout<<b<<endl;
-    return 0;
-}
 
 
 
