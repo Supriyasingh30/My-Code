@@ -1,5 +1,6 @@
 #include<iostream>
-#include<cmath>
+//#include<cmath>    //HEADER FILES
+#include<math.h>
 using namespace std;
 
 //Lecture 1: Data Types & Type Modifiers
@@ -49,7 +50,7 @@ if(pocketmoney>=5000){
 }else if(pocketmoney>=2000 && pocketmoney<5000){
     cout<<"Streat Food"<<endl;
 }else{
-    cout<<"Ghar ka khana kha budget nahi hai tere pas"<<endl;
+    cout<<"Let's cook something special at home"<<endl;
 }
     return 0;
 }*/
@@ -579,6 +580,40 @@ if(flag==0){
     return 0;
 }*/
 
+//REVERSE A NUMBER
+/*int main(){
+    int n;
+    int reverse=0;
+    cin>>n;
+    while(n>0){
+ int lastdigit= n%10;
+ reverse = reverse*10 + lastdigit;
+ n=n/10;
+    }
+    cout <<reverse<<endl;
+
+    return 0;
+}*/
+
+// Identify whether a number is Armstrong no. or not
+/*int main(){
+    int n;
+    cin>>n;
+    int sum=0;
+    int originaln=n;
+    while(n>0){
+        int lastdigit=n%10;
+        sum+= pow(lastdigit,3);  //pow() is a function which is used to find power on a number
+  n=n/10;
+    }
+    if(sum==originaln){
+        cout<<"Armstrong Number"<<endl;
+    } 
+    else{
+        cout<<"Not Armstrong Number"<<endl;
+    }
+    return 0;
+}*/
 
 
 
