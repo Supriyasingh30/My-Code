@@ -55,7 +55,7 @@ if(pocketmoney>=5000){
     return 0;
 }*/
 
-//Findind Maximum between three integers
+//Find Maximum for three numbers
 /*int main()
 {
 int a, b, c;
