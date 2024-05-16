@@ -1,11 +1,12 @@
 #include<iostream>
+#include<cmath>
 using namespace std;
 
 //Lecture 1: Data Types & Type Modifiers
 /*int main()
 {
-int a;
-a=12;
+int a = 'a';
+
 cout<<"size of int "<<sizeof(a)<<endl;
 float b;
 cout<<"size of float "<<sizeof(b)<<endl;
@@ -84,7 +85,7 @@ if(n%2==0){
 
 //Lecture 4: Loops
 //For Loop
-int main(){
+/*int main(){
 int a;
 cout<<"ENter a number till which you want to repeat the sentence:";
 cin>>a;
@@ -92,7 +93,7 @@ for(int i=0;i<=a;i++){
     cout<<"Hare Krishna"<<endl;
 }
     return 0;
-}
+}*/
 
 
 /*int main()
@@ -196,4 +197,648 @@ for(int num=a;num<=b;num++){
 }
     return 0;
 }*/
+
+
+//LECTURE 3.2: Switch Case statement
+//without using it:
+
+/*int main(){
+string lang;
+cout<< "Enter a language:";
+cin>>lang; 
+if(lang=="Hindi" || lang=="hindi" || lang=="HINDI"){
+cout<<"Namaste"<<endl;
+}
+else if(lang=="French" || lang=="french" || lang=="FRENCH"){
+cout<<"Bonjour"<<endl;
+}
+else if(lang=="English" || lang=="english" || lang=="ENGLISH"){
+cout<<"Hello"<<endl;
+}
+else if(lang=="Spanish" || lang=="spanish" || lang=="SPANISH"){
+cout<<"Hola"<<endl;
+}
+else if(lang=="German" || lang=="german" || lang=="GERMAN"){
+cout<<"Hallo"<<endl;
+}
+else if(lang=="Italian" || lang=="italion" || lang=="ITALION"){
+cout<<"Ciao"<<endl;
+}
+else {
+    cout<<"I'm still learning this language"<<endl;
+}
+
+return 0;
+}*/
+
+//USING SWITCH CASE STAT:
+/*int main(){
+cout<<"a= Hindi"<<endl;
+cout<<"b= English"<<endl;
+cout<<"c= French"<<endl;
+cout<<"d= German"<<endl;
+cout<<"e= Spanish"<<endl;
+cout<<"f= Italion"<<endl;
+    char button;
+    cout<<"Enter a character:";
+    cin>>button;
+
+    switch(button){
+        case 'a':
+        cout<<"Namaste"<<endl;
+        break;
+        case 'b':
+        cout<<"Hello"<<endl;
+        break;
+        case 'c':
+        cout<<"Bonjour"<<endl;
+        break;
+        case 'd':
+        cout<<"Hallo"<<endl;
+        break;
+        case 'e':
+        cout<<"Hola"<<endl;
+        break;
+        case 'f':
+        cout<<"Ciao"<<endl;
+        break;
+        default:
+        cout<<"I'm still learning this language"<<endl;
+    }
+    return 0;
+}*/
+
+//LECTURE 3.3: Operators
+//1.Arithmetic operator: Binary and unary op
+//pre increment/decrement, post increment/decrement
+/*int main(){
+int i=15, j=24, k;
+//  15    14     23    14   23    15     22
+k = i-- - i++ + --j - --i - j-- + ++i - j++;
+cout<<i<<endl; // 14 then 15 then 14 final 15
+//final value of i, j & k is taken
+cout<<j<<endl;// 23 then 22 final 23
+cout<<k<<endl; //-20
+    return 0;
+}*/
+
+// write a program to output whether a number is divisible by both 2 and 3 or divisible by only one of them
+
+/*int main(){
+int n;
+cout<<"Enter a number:";
+cin>>n;
+if(n%2==0 &&  n%3==0){
+    cout<<"Divisible by both"<<endl;
+}else if(n%2==0){
+    cout<<"Divisible by 2"<<endl;
+}else if(n%3==0){
+    cout<<"Divisible by 3"<<endl;
+}else{
+    cout<<"Divisible by none"<<endl;
+}
+    return 0;
+}*/
+
+//LECTURE 4.1: Pattern Questions
+//1.RECTANGLE PATTERN
+/*int main(){
+int row;
+cout<<"Enter number of rows:";
+cin>>row;
+int col;
+cout<<"Enter number of columns:";
+cin>>col;
+for(int i=1; i<=row; i++){
+    for(int j=1;j<=col;j++){
+cout<<"*";
+    }
+    cout<<endl;
+}
+    return 0;
+}*/
+
+//2.HOLLOW RECTANGLE PATTERN
+/*int main(){
+int row;
+cout<<"Enter number of rows:";
+cin>>row;
+int col;
+cout<<"Enter number of columns:";
+cin>>col;
+for(int i=1;i<=row;i++){
+    for(int j=1;j<=col;j++){
+        if(i==1 || i==row){
+            cout<<"*";
+        }else if(j==1 || j==col){
+            cout<<"*";
+        }else{
+        cout<<" ";
+        }
+    }
+    cout<<endl;
+}
+    return 0;
+}*/
+
+//3.INVERTED HALF PYRAMID
+/*int main(){
+int n;
+cin>>n;
+for(int i=n;i>=1;i--){
+    for(int j=1;j<=i;j++){
+        cout<<"*";
+    }
+    cout<<endl;
+}
+    return 0;
+}*/
+
+//4.HALF PYRAMID AFTER 180 ROTATION
+/*int main(){
+int n;
+cin>>n;
+for(int i=1;i<=n;i++){  //it defines no of rows
+    for(int j=1;j<=n;j++){ //har rows mein kuchh na kuchh print ho raha hoga
+        if(j<=n-i){
+            cout<<"  "; //yaha ek jyada space hai
+        }else{
+            cout<<"* "; //if space is not added in the above syntax but in this then triangle ban jayega
+        }
+    cout<<endl;
+}
+return 0;
+}*/
+
+//5.HALF PYRAMID USING NUMBERS
+/*int main(){
+int n;
+cin>>n;
+for(int i=1;i<=n;i++){ //Loops for rows
+for(int j=1;j<=i;j++){
+    cout<<i<<" ";
+}
+cout<<endl;
+}
+return 0;
+}*/
+
+//6.FLOYD'S PATTERN
+/*int main(){
+int n;
+cin>>n;
+int count=1;
+for(int i=1;i<=n;i++){
+    for(int j=1;j<=i;j++){ //Loops for rows
+   cout<<count<<" ";
+   count++;
+    }
+    cout<<endl;
+}
+return 0;
+}*/
+
+//7.BUTTERFLY PATTERN (Good one)
+/*int main(){
+int n;
+cin>>n;
+for (int i=1;i<=n;i++){  //rows
+    for(int j=1;j<=i;j++){ //col
+        cout<<"* ";
+    }
+    int space=2*n-2*i;
+    for(int j=1;j<=space;j++){
+        cout<<"  ";
+    }
+    for(int j=1;j<=i;j++){
+  cout<<"* ";
+    }
+    cout<<endl;
+}
+for (int i=n;i>=1;i--){  //rows
+    for(int j=1;j<=i;j++){ //col
+        cout<<"* ";
+    }
+    int space=2*n-2*i;
+    for(int j=1;j<=space;j++){
+        cout<<"  ";
+    }
+    for(int j=1;j<=i;j++){
+  cout<<"* ";
+    }
+    cout<<endl;
+}
+return 0;
+}*/
+
+
+//LECTURE 4.2:ADVANCED PATTERN PROBLEM
+//1.INVERTED PATTERN
+/*int main(){
+    int n;
+    cin>>n;
+    for(int i=1;i<=n;i++){
+        for(int j=1;j<=n+1-i;j++){
+            cout<<j<<" ";
+        }
+        cout<<endl;
+    }
+    return 0;
+}*/
+  
+  //2.0-1 PATTERN
+  /*int main(){
+int n;
+cin>>n;
+for(int i=1;i<=n;i++){
+    for(int j=1;j<=i;j++){
+        if((i+j)%2==0){
+            cout<<" 1";
+        }else{
+            cout<<" 0";
+        }
+    }
+    cout<<endl;
+}
+return 0;
+  }*/
+
+//3.RHOMBUS PATTERN
+/*int main(){
+int n;
+cin>>n;
+for(int i=1;i<=n;i++){
+    for(int j=1;j<=n-i;j++){ //loops for space
+        cout<<"  ";
+    }
+    for(int j=1;j<=n;j++){
+        cout<<"* ";
+    }
+    cout<<endl;
+}
+return 0;
+}*/
+
+//4.TRIANGULAR NUMBER PATTERN
+/*int main(){
+int n;
+cin>>n;
+ for(int i=1;i<=n;i++){ //loops for rows
+    for(int j=1;j<=n-i;j++){
+     //loops for space in column
+    cout<<" ";
+ }
+ for(int j=1;j<=i;j++){ //loops for numbers in col
+cout<<j<<" " ;
+ }
+ cout<<endl;
+ }
+ return 0;
+}*/
+
+//5.PALINDROMIC PATTERN(Good one) thoda kam samajh aaya
+/*int main(){
+int n;
+cin>>n;
+for(int i=1;i<=n;i++){
+    int j;
+    for(j=1;j<=n-i;j++){
+        cout<<"  ";
+    }
+    int k=i;
+    for(;j<=n;j++){
+        cout<<k--<<" ";
+    }
+    k=2;
+    for(;j<=n+i-1;j++){
+        cout<<k++<<" ";
+    }
+    cout<<endl;
+}
+    return 0;
+}*/
+
+//6.STAR PATTERN
+/*int main(){
+int n;
+cin>>n;
+for(int i=1;i<=n;i++){ //loops for rows
+for(int j=1;j<=n-i;j++){ //loops for space
+cout<<"  ";
+}
+for(int j=1;j<=2*i-1;j++){ //loops for stars
+    cout<<"* ";
+}
+cout<<endl;
+}
+for(int i=n;i>=1;i--){ //loops for rows in inverted
+for(int j=1;j<=n-i;j++){ //loops for space in inverted
+cout<<"  ";
+}
+for(int j=1;j<=2*i-1;j++){ //loops for stars inverted
+    cout<<"* ";
+}
+cout<<endl;
+}
+return 0;
+}*/
+
+//7.ZIG-ZAG PATTERN(Good one)
+/*int main() {
+int n;
+cin>>n;
+for(int i=1;i<=3;i++){
+    for(int j=1;j<=n;j++){
+        if((i+j)%4==0 || (i==2 && j%4==0)){
+            cout<<"* ";
+        } else{
+            cout<<"  ";
+        }
+    }
+    cout<<endl;
+}
+    return 0;
+  }*/     
+
+//LECTURE 6.1: Functions
+//Using function identify whether a number is prime or not
+/*int main(){
+int n;
+cin>>n;
+bool flag=0;
+for(int i=2;i<=sqrt(n);i++){
+    if(n%i==0){
+        cout<<"Non-Prime"<<endl;
+        flag=1;
+        break;
+    }                    //sqrt is a function
+}
+if(flag==0){
+    cout<<"Prime"<<endl;
+}
+    return 0;
+}*/
+
+int main (){
+    int a = 'a';
+    int b = 'A';
+    cout<<a<<endl;
+    cout<<b<<endl;
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
