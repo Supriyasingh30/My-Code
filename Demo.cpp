@@ -1,6 +1,7 @@
 #include<iostream>
 //#include<cmath>    //HEADER FILES
-#include<math.h>
+#include<String>
+//#include<math.h>
 using namespace std;
 
 //Lecture 1: Data Types & Type Modifiers
@@ -568,6 +569,7 @@ int n;
 cin>>n;
 bool flag=0;
 for(int i=2;i<=sqrt(n);i++){
+    cout<<i<<endl;
     if(n%i==0){
         cout<<"Non-Prime"<<endl;
         flag=1;
@@ -615,39 +617,525 @@ if(flag==0){
     return 0;
 }*/
 
+//Mathematics in c++
+//Factorial of a number
+/*int main(){
+long n;
+cin>>n;
+long ans=1;
+for(int i=1;i<=n;i++) {  //this will give n, n-1, n-2 and so on start hoga from n-n, n-(n-1)
+//for(int i=n;i>=1;i--) ye bhi use kar sakte hain then start hoga from n
+ans=ans*i;               // through this n*n-1*n-2 and so on
+}
+if(n<0){
+    cout<<"No factorial for negative numbers"<<endl;
+}else{
+    cout<<"Factorial of " <<n<< " is " <<ans<<endl;
+}
+    return 0;
+}*/
+
+//FIBONACCI SERIES(0, 1, 1, 2, 3, 5, 8, 13, 21....)
+/*int main(){
+int n;
+cout<<"Enter  the No. of Fibonacci terms: ";
+cin>>n;
+int a=0, b=1, c;
+cout<<a<<" "<<b<<" ";
+for(int i=2; i<n;i++){
+
+c = a + b;
+cout<<c<<" ";
+a=b;
+b=c;
+}
+cout<<endl;
+    return 0;
+}*/
 
 
+//LECTURE 6.2:
+//Find Factorials of any two given numbers without use of function and it's a prolonged process
+/*int main(){
+int n1,n2;
+cin>>n1>>n2;
+int ans1=1;
+
+for (int i=1;i<=n1;i++){
+ans1 = ans1*i;
+}
+if(n1<0){
+    cout<<"No Factorial for negative numbers"<<endl;
+}else{
+    cout<<"Factorial of " <<n1<< " is " <<ans1<<endl;
+}
+int ans2=1;
+for (int j=1;j<=n2;j++){
+ans2 = ans2*j;
+}
+if(n2<0){
+    cout<<"No Factorial for negative numbers"<<endl;
+}else{
+    cout<<"Factorial of " <<n2<< " is " <<ans2<<endl;
+}
+    return 0;
+}*/
+
+//Arrays Introduction 
+//1-D Array
+/*int main(){
+int arr[10];
+for (int i=0;i<10;i++){
+    cin>>arr[i];  //input array
+}cout<<endl;
+ for (int i=0;i<10;i++){
+    cout<<arr[i]<<" ";   //output array
+}cout<<endl;
+    return 0;
+}*/
+
+//2-D ARRAY
+/*int main(){
+int arr[5][5];
+for(int i=0;i<5;i++){   //Loops for rows
+    for(int j=0;j<5;j++){  //Loops for Column
+        cin>>arr[i][j];
+    }
+}
+cout<<endl;
+for(int i=0;i<5;i++){   //Loops for rows
+    for(int j=0;j<5;j++){  //Loops for Column
+        cout<<arr[i][j]<<" ";
+    }
+    cout<<endl;
+}
+
+    return 0;
+}*/
 
 
+//FUCTIONS
+
+/*void pattern(){  // Void function me hame value return nahi karna hota hai
+    int n;
+    cout<<"Enter Number Of Rows: ";
+cin>>n;
+for(int i=1;i<=n;i++){
+    for(int j=1;j<=i;j++){   //Now if we want to print more than one pattern at a time, we can do this without writing the same codes with the help of function
+        cout<<"* ";
+    }
+    cout<<endl;
+}
+}
+int main(){
+pattern();
+pattern();
+pattern();
+pattern();
+    return 0;
+}*/
+
+/*int power(int no, int pow){
+    int ans=1;
+    for(int i=0;i<pow;i++){
+        ans = ans*no;
+    }
+    return ans;
+}
+int main(){
+int n, p, answer;
+cout<<"Enter No. : ";
+cin>>n;
+cout<<"Enter Power : ";
+cin>>p;
+cout<<"Answer is : "<<pow(n,p)<<endl;
+    return 0;
+}*/
+
+//integer return type function
+/*int factorial(int n){
+    int ans=1;
+    for(int i=n;i>=1;i--){
+        ans *= i;
+    }
+    return ans;
+}
+int main(){
+int n;
+cout<<"Enter a Number For Factorial: ";
+cin>>n;
+cout<<n<<"!" <<" is " <<factorial(n)<<endl;
+    return 0;
+}*/
+
+//Float return type function
+/*float division(float dividend, float divisor){
+    float ans;
+    ans = dividend/divisor;
+    return ans;
+}
+int main(){
+float dividend, divisor;
+cout<<"Enter a Dividend: ";
+cin>>dividend;
+cout<<"Enter a Divisor: ";
+cin>>divisor;
+cout<<dividend<< "/" <<divisor << " : " <<division(dividend, divisor)<<endl;
+    return 0;
+}*/
+
+//Character return type Function
+ /*char firstcap(char arr[10], int n){
+    for (int i=0;i<n;i++){
+        if(arr[i]>='A' && arr[i]<='Z')
+        return arr[i];
+    }
+ }
+ int main(){
+int n=10;
+char arr[n];
+for(int i=0;i<n;i++){
+    cin>>arr[i];
+}
+    cout<<"First Capital Character is : "<<firstcap(arr, n)<<endl;
+
+    return 0;
+ }*/
+
+//Bool return type function
+/*bool isPrime(int n){
+    if(n<=2){
+        return true;
+    }
+    for(int i=2;i*i<n;i++){
+        if(n%i==0)
+            return false;
+        
+    }
+    return true;
+}
+int main(){
+int no;
+cout<<"Enter a number to check whether it's prime or not: ";
+cin>>no;
+if(isPrime(no)){
+    cout<<no<<" is a Prime Number"<<endl;
+}
+else{
+    cout<<no<<" is a Non-Prime Number"<<endl;
+}
+    return 0;
+}*/                      
+
+//Function (a)Call by Value
+/*void change(int no){
+    no=no*no;
+    cout<<"Value of function is "<<no<<endl;
+}
+
+int main(){
+int n;
+cout<<"Enter a value:";
+cin>>n;
+change(n);
+cout<<"Value in main is "<<n<<endl;   
+    return 0;
+}*/
+
+  /*void swap(int A, int B){
+    int ans=A;
+   A=B;
+   B=ans;
+   cout<<"A :"<<A<<endl<<"B :"<<B<<endl;
+  }
 
 
+int main(){
+    int x=200, y=400;
+    swap(x, y);
+    cout<<"X : "<<x<<endl<<" Y :"<<y<<endl;
+    return 0;
+}*/
 
 
+//Function (b)Call by Reference
+/*void change(int &no){
+    no=no*no;
+    cout<<"Value of function is "<<no<<endl;
+}
+
+int main(){
+int n;
+cout<<"Enter a value:";
+cin>>n;
+change(n);
+cout<<"Value in main is "<<n<<endl;   
+    return 0;
+}*/
+
+/*void swap(int &A, int & B){
+    int ans=A;
+   A=B;
+   B=ans;
+   cout<<"A :"<<A<<endl<<"B :"<<B<<endl;
+  }
 
 
+int main(){
+    int x=200, y=400;
+    swap(x, y);
+    cout<<"X : "<<x<<endl<<" Y :"<<y<<endl;
+    return 0;
+}*/
 
+//Object Oriented Programming System(OOPs)
+//1.CLASS & OBJECT
 
+/*class laptop
+{
+   public: 
+    string name;
+    string brand;   //These are attributes of class
+    float price;
+    string processor;
 
+    void getdata()
+    {
+        cout<<"Name: ";
+        cin>>name;
+        cout<<"Brand: ";
+        cin>>brand;
+        cout<<"Price: ";
+        cin>>price;
+        cout<<"Processor: ";
+        cin>>processor;
 
+    }
+    void showdata() //Function of class
+    {
+        cout<<"Name of the Laptop is "<<name<<endl;
+        cout<<"Brand of the Laptop is "<<brand<<endl;
+        cout<<"Price of the Laptop is "<<price<<endl;
+        cout<<"Processor of the Laptop is "<<processor<<endl;
+    }
+ void startUp()  // These are member function of class
+ {
+    cout<<"Laptop "<<name<<" has started;"<<endl;
+ }
+ void shutDown()
+ {
+    cout<<"Laptop "<<name<<" is shutting Down;"<<endl;
+ }
 
+};
 
+int main()
+{
+  laptop laptop1;  //This is object of class laptop
+   laptop1.getdata();
+   laptop1.showdata();
+   laptop1.startUp();
+   laptop1.shutDown();
+    return 0;
+}*/
 
+//Function overloading
+/*void run()
+{
+    cout<<"Run is running"<<endl;
+}
+void run(int a)
+{
+    cout <<"Run with int "<<a<<" is running"<<endl;
+}
+void run(char a)
+{
 
+}
+void run(int a, int b)  //these are function overloading, we can differentiate these on the basis of their respective parameters
+{
 
+}
+void run(char a, int b){
+}
 
+int main()
+{
+run();
+run(5);
+    return 0;
+}*/
 
+//Function overloading in class
+/*class laptop
+{
+public:
+string name;
+int processor;
+void run()
+{
+cout<<"Void run is running"<<endl;
+}
+void run(int a)
+{
+cout<<"int "<<a<<" is running"<<endl;
+}
+};
+int main()
+{
+    laptop laptop1;
+    laptop1.run();
+    laptop1.run(5);
 
+    return 0;
+}*/
 
+//Constructor
+ /*class laptop
+{
+    public :
+      string name;
+      float price;
+      
+      laptop()  //This is constructor class ke naam pe hi contructor hota hai
+      {
+        //strcpy (name, "Dell");
+        name = "Dell";
+        price = 100.0;
+        cout<<"Name : "<<name<<endl<<"Price : "<<price<<endl;
+      }
 
+};          
+int main()           
+{        
+    laptop l;          //This is object   
+    return 0;         //we can see here yahan koi function call nahi kiye sirf object define hua hai
+}*/
 
+// Default constructor, Parameterised constructor and copy constructor
+/*class laptop
+{
+    public :
+      string name;
+      float price;
 
+//Default Constructor
+      laptop()  
+      {
+        cout<<"Name : "<<name<<endl<<"Price : "<<price<<endl;
+      }
+      
+      //Parameterised Constructor
+      laptop(string lname, float lprice) 
+      {
+        name = lname;
+        price = lprice;
+        cout<<"Name : "<<name<<endl<<"Price : "<<price<<endl;
+      }
 
+      //Copy consructor
+      laptop(const laptop &p)   
+      {
+        name = p.name;
+        price = p.price+200.82;
+        cout<<"Name : "<<name<<endl<<"Price : "<<price<<endl;
+      }
 
+      //DESTRUCTOR (iska overloading nahi hota aur last wale object se starting tak output show karega)
+   ~laptop()  
+    {
+        cout<<"Destructing "<<price<<endl;
+    }
 
+}; 
+         
+int main()           
+{        
+    laptop l;
+    laptop m("Dell", 100.0);   
+    laptop n = m;       
+    return 0;        
+}*/
 
+//INHERITANCE
 
+//(a) Single Inheritance
+//(b) Multiple inheritance
+/*class gamingLaptop
+{
+public :
+gamingLaptop()
+{
+cout<<"Base Class 1 is called"<<endl;
+}
+};
+class laptop   //BASE CLASS
+{
+    public :
+    string name;
+    float price;
 
+    laptop()   //BASE CLASS'S CONSTRUCTOR
+    {
+        cout<<"Base Class 2 Called"<<endl;
+    }
+};
+  
+  class mylaptop : public laptop, public gamingLaptop    //DERIVED CLASS
+  {
+    public :
+      string name;
+      int vram;
 
+      mylaptop()     //DERIVED CLASS'S CONSTRUCTOR
+      {
+        cout<<"Derived Class Called"<<endl;
+      }
+  };
+
+int main()
+{
+  mylaptop lap1;
+    return 0;
+}*/
+
+//(c) Multi-Level Inheritance
+/*class laptop   //BASE CLASS
+{
+    public :
+    string name;
+    float price;
+
+    laptop()   //BASE CLASS'S CONSTRUCTOR
+    {
+        cout<<"Base Class Called"<<endl;
+    }
+};
+
+class gamingLaptop : public laptop   //Derived class 1
+{
+public :
+gamingLaptop()
+{
+cout<<"Derived Class 1 is called"<<endl;
+}
+};
+
+  class gamingSystem : public gamingLaptop  //Derived class 2
+  {
+    public :
+ gamingSystem()
+ {
+    cout<<"Derived class 2 is called"<<endl;
+ }
+  };
+  
+
+int main()
+{
+  gamingSystem lap1;
+    return 0;
+}*/
 
 
 
